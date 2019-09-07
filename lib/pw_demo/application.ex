@@ -9,7 +9,8 @@ defmodule PwDemo.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      PwDemoWeb.Endpoint
+      PwDemoWeb.Endpoint,
+      {Tortoise.Connection, Application.get_env(:pw_demo, :tortoise)}
       # Starts a worker by calling: PwDemo.Worker.start_link(arg)
       # {PwDemo.Worker, arg},
     ]

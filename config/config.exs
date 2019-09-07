@@ -22,6 +22,14 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :pw_demo, :tortoise,
+  client_id: :pw_demo_web,
+  user_name: System.get_env("MQTT_USERNAME"),
+  password: System.get_env("MQTT_PASSWORD"),
+  handler: {PwDemo.Mqtt, []},
+  server: {Tortoise.Transport.Tcp, host: "farmer.cloudmqtt.com", port: 17208},
+  subscriptions: [{"devices/rpi", 0}]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
