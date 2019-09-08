@@ -51,3 +51,26 @@ body, form, ul, table {
 #device-list {
   min-height: 190px;
 }
+
+#device-list .browser {
+  display: block;
+  right: 0;
+  text-align: right;
+  width: 100%;
+}
+#device-list .browser,
+#device-list .device {
+  margin: 30px 0px;
+}
+
+#device-list .browser span,
+#device-list .device span {
+  padding: 13px 33px;
+  border-radius: 35px;
+  background: #f3f3f4;
+}
+
+#msg-container {
+  height: 40vh;
+  overflow: scroll;
+}

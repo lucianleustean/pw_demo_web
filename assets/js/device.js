@@ -29,9 +29,16 @@ let Device = {
 
   renderMessage(msgContainer, {message, source}) {
     let template = document.createElement("div")
-    template.innerHTML = `<b>${source}</b>: ${message}`
+    if (source == "browser") {
+      template.className = "browser"
+      template.innerHTML = `<span>${message} :<strong>${source}</strong></span>`
+    } else {
+      template.className = "device"
+      template.innerHTML = `<span><strong>${source}</strong>: ${message} </span>`
+    }
 
     msgContainer.appendChild(template)
+    msgContainer.offsetTop
     msgContainer.scrollTop = msgContainer.scrollHeight
   }
 }

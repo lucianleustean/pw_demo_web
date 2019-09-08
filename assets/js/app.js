@@ -18,3 +18,9 @@ import socket from "./socket"
 import Device from "./device"
 
 Device.init(socket, document.getElementById("device-list"))
+
+document.getElementById("msg-input").addEventListener("keyup", event => {
+  if (event.keyCode === 13) {
+    document.getElementById("msg-submit").click();
+  }
+});
