@@ -1,4 +1,17 @@
-# PwDemo
+# Programmers' Week - Presentation Demo - Web App
+
+## See the associated Web App for this project
+
+  * [Programmers' Week - Embedded App](https://github.com/lucianleustean/pw_demo_nerves)
+
+## Requirements
+
+Setup a MQTT server locally (e.g. VerneMQ) or use a hosted one (e.g. CloudMQTT)
+
+  * update `config/config.exs` or
+  * export MQTT_USERNAME="username" MQTT_PASSWORD="password"
+
+## Getting Started
 
 To start your Phoenix server:
 
